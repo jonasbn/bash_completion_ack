@@ -55,7 +55,7 @@ $ . /usr/local/etc/bash_completion.d/ack
 
 ## Motivation
 
-The programmatic capabilities discovered while implementing my first `bash` completions intriqued me. This is a highly experimental feature, which nevertheless was lots of fun to implement.s
+The programmatic capabilities discovered while implementing my first `bash` completions intriqued me. This is a highly experimental feature, which nevertheless was lots of fun to implement.
 
 ## See Also
 
