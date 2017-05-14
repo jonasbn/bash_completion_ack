@@ -21,9 +21,15 @@ An example `ackrc` based on [my TIL](https://github.com/jonasbn/til/blob/master/
 Would work as follows:
 
 ```
-$ ack <tab>
+$ ack -<tab>
 --mojo --conf
 ```
+
+```
+$ ack <tab>
+```
+
+List contents of directory as default for `bash`.
 
 That is all this `bash` tab completion does for now.
 
@@ -41,7 +47,9 @@ Based on [an introduction](https://debian-administration.org/article/316/An_intr
 $ sudo cp ack /etc/bash_completion.d/
 ```
 
-This is not a part of [the completions](https://github.com/Homebrew/homebrew-completions) available under `brew` on OSX. But you can copy the `ack` file to the same directory:
+This is not a part of [the completions](https://github.com/Homebrew/homebrew-completions) available under `brew` on OSX. But you can copy the `ack` file to the same directory. Do note that this path has changed in newer versions.
+
+Old path (`bash-completions`):
 
 ```bash
 $ cp ack /usr/local/etc/bash_completion.d/
@@ -53,9 +61,31 @@ And to activate right away:
 $ . /usr/local/etc/bash_completion.d/ack
 ```
 
+New path (`bash-completions2`)
+
+```bash
+$ cp ack /usr/local/share/bash-completion/completions/
+```
+
+And to activate right away:
+
+```bash
+$ source /usr/local/share/bash-completion/completions/ack
+```
+
 ## Motivation
 
 The programmatic capabilities discovered while implementing my first `bash` completions intriqued me. This is a highly experimental feature, which nevertheless was lots of fun to implement.
+
+## History
+
+- 2.0.0
+    + Initial version working with `bash` version 4.
+    + Change to behaviour, `-` have to be entered for detected options to be listed
+
+- 1.0.0
+    + Initial version working with `bash` version 3.
+
 
 ## See Also
 
@@ -65,7 +95,9 @@ From the [GNU Documentation](https://www.gnu.org/software/bash/manual/html_node/
 
 Good two-part article, "An Introduction to Bash Completion": [Part 1](https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1) and [Part 2](https://debian-administration.org/article/317/An_introduction_to_bash_completion_part_2).
 
-Please note that this experimental implementation has only been tested with `bash` version 3.
+Please note that this experimental implementation has only been tested with `bash` version 3 (see version 1.0.0).
+
+Versions after version 1.0.0 have been tested with `bash` version 4.
 
 ## License
 
