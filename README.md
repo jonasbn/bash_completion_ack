@@ -65,10 +65,12 @@ From the [GNU Documentation](https://www.gnu.org/software/bash/manual/html_node/
 
 Good two-part article, "An Introduction to Bash Completion": [Part 1](https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1) and [Part 2](https://debian-administration.org/article/317/An_introduction_to_bash_completion_part_2).
 
+Please note that this experimental implementation has only been tested with `bash` version 3.
+
 ## License
 
 This is made available under the MIT license, see separate license file.
 
 ## Copyright 
 
-:copyright: jonasbn 2016
+:copyright: jonasbn 2016-2017
