@@ -33,13 +33,37 @@ List contents of directory as default for `bash`.
 
 That is all this `bash` tab completion does for now.
 
-## Installation
+## Download
 
 ```bash
 $ curl https://raw.githubusercontent.com/jonasbn/bash_completion_ack/master/ack > ack
 ```
 
-Where your completions are located might vary:
+## Installation
+
+When downloaded you have to install the completion implementation. Where your completions are located might vary.
+
+### Personal
+
+If you want to install them for your personal use, do the following:
+
+```bash
+for bcfile in ~/.bash_completion.d/* ; do
+  . $bcfile
+done
+```
+
+Ref: [ServerFault.com: _Standard place for user defined bash_completion.d scripts?_](https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts)
+
+```bash
+$ mkdir ~/.bash_completion.d
+```
+
+```bash
+$ cp ack ~/.bash_completion.d/
+```
+
+### System-wide example from Debian
 
 Based on [an introduction](https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1) to `bash` completions on Debian.
 
@@ -47,9 +71,13 @@ Based on [an introduction](https://debian-administration.org/article/316/An_intr
 $ sudo cp ack /etc/bash_completion.d/
 ```
 
-This is not a part of [the completions](https://github.com/Homebrew/homebrew-completions) available under `brew` on OSX. But you can copy the `ack` file to the same directory. Do note that this path has changed in newer versions.
+### System-wide example from OSX
 
-Old path (`bash-completions`):
+This assumes you are using **Homebrew**
+
+Do note that paths vary based on whether you are using `bash` 3 or 4
+
+#### `bash` 3 (Formula: `bash-completions`):
 
 ```bash
 $ cp ack /usr/local/etc/bash_completion.d/
@@ -58,10 +86,10 @@ $ cp ack /usr/local/etc/bash_completion.d/
 And to activate right away:
 
 ```bash
-$ . /usr/local/etc/bash_completion.d/ack
+$ source  /usr/local/etc/bash_completion.d/ack
 ```
 
-New path (`bash-completions2`)
+#### `bash` 4 (Formula: `bash-completions2`)
 
 ```bash
 $ cp ack /usr/local/share/bash-completion/completions/
@@ -98,6 +126,8 @@ Good two-part article, "An Introduction to Bash Completion": [Part 1](https://de
 Please note that this experimental implementation has only been tested with `bash` version 3 (see version 1.0.0).
 
 Versions after version 1.0.0 have been tested with `bash` version 4.
+
+The most comprehensive collection of `bash` completions I have come across is [the one](https://github.com/scop/bash-completion) from the **Debian Linux distribution**. It is also the one offered for OSX via **Homebrew**.
 
 ## License
 
