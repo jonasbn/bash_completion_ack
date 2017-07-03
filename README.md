@@ -2,6 +2,8 @@
 
 Experimental tab completion for [ack](http://beyondgrep.com/), the CLI tool going beyond grep.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Usage
 
 This completion script, reads your `$HOME/.ackrc` files and offers tab completions for your custom types.
