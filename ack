@@ -1,9 +1,11 @@
+# Bash completion for ack:
+# ack <tab>
 #
-#  Completion for ack:
-#
-#  ack <tab>
-#
-_ack() 
+# Github: https://github.com/jonasbn/bash_completion_ack
+# Copyright Jonas B. Nielsen (jonasbn) 2017
+# MIT License
+
+_ack()
 {
     local cur prev opts
     COMPREPLY=()
