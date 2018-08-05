@@ -20,4 +20,4 @@ _ack()
     fi
 }
 
-complete -F _ack ack
+complete -F _ack ack -o default
