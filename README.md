@@ -8,8 +8,8 @@ Experimental tab completion for [ack](http://beyondgrep.com/), the CLI tool goin
 
 This completion script, reads your `$HOME/.ackrc` files and offers tab completions for your custom types.
 
-```
-$ ack <tab>
+```bash
+$ ack -<tab>
 --yourcustomtype
 ```
 
@@ -22,18 +22,30 @@ An example `ackrc` based on [my TIL](https://github.com/jonasbn/til/blob/master/
 
 Would work as follows:
 
-```
+```bash
 $ ack -<tab>
 --mojo --conf
 ```
 
-```
+```bash
 $ ack <tab>
 ```
 
 List contents of directory as default for `bash`.
 
-That is all this `bash` tab completion does for now.
+If you _tab_ after your completion has been made the contents of the current directory is displayed:
+
+```bash
+$ ack -<tab>
+--mojo --conf
+$ ack --mojo <tab>
+.editorconfig                          CONTRIBUTING.md                        bash_completion_ack.code-workspace
+.git/                                  LICENSE                                bash_completion_ack.sublime-project
+.gitattributes                         README.md                              bash_completion_ack.sublime-workspace
+.gitignore                             ack
+```
+
+That is all this `bash` tab completion does for now :-)
 
 ## Download
 
@@ -117,6 +129,9 @@ The programmatic capabilities discovered while implementing my first `bash` comp
 
 ## History
 
+- 2.1.0
+    + Minor adjustment to behaviour, post completions, the contents of the current directory is listed
+
 - 2.0.0
     + Initial version working with `bash` version 4.
     + Change to behaviour, `-` have to be entered for detected options to be listed
@@ -145,4 +160,4 @@ This is made available under the MIT license, see separate license file.
 
 ## Copyright
 
-:copyright: jonasbn 2016-2017
+:copyright: jonasbn 2016-2018
