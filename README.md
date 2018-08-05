@@ -1,5 +1,7 @@
 # Ack Bash Completion
 
+<!-- markdownlint-disable MD014 -->
+
 Experimental tab completion for [ack](http://beyondgrep.com/), the CLI tool going beyond grep.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -15,7 +17,7 @@ $ ack -<tab>
 
 An example `ackrc` based on [my TIL](https://github.com/jonasbn/til/blob/master/ack/define_a_custom_search_filetype_scope.md)
 
-```
+```ini
 --type-set=mojo=.css,.pl,.pm,.html,.js,.tt,.ep,.conf
 --type-set=conf=.conf
 ```
@@ -29,6 +31,10 @@ $ ack -<tab>
 
 ```bash
 $ ack <tab>
+.editorconfig                          CONTRIBUTING.md                        bash_completion_ack.code-workspace
+.git/                                  LICENSE                                bash_completion_ack.sublime-project
+.gitattributes                         README.md                              bash_completion_ack.sublime-workspace
+.gitignore                             ack
 ```
 
 List contents of directory as default for `bash`.
@@ -99,7 +105,7 @@ This assumes you are using **Homebrew**
 
 Do note that paths vary based on whether you are using `bash` 3 or 4
 
-#### `bash` 3 (Formula: `bash-completions`):
+#### `bash` 3 (Formula: `bash-completions`)
 
 ```bash
 $ cp ack /usr/local/etc/bash_completion.d/
@@ -130,15 +136,14 @@ The programmatic capabilities discovered while implementing my first `bash` comp
 ## History
 
 - 2.1.0
-    + Minor adjustment to behaviour, post completions, the contents of the current directory is listed
+  - Minor adjustment to behaviour, post completions, the contents of the current directory is listed
 
 - 2.0.0
-    + Initial version working with `bash` version 4.
-    + Change to behaviour, `-` have to be entered for detected options to be listed
+  - Initial version working with `bash` version 4.
+  - Change to behaviour, `-` have to be entered for detected options to be listed
 
 - 1.0.0
-    + Initial version working with `bash` version 3.
-
+  - Initial version working with `bash` version 3.
 
 ## See Also
 
