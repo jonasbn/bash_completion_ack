@@ -165,4 +165,4 @@ This is made available under the MIT license, see separate license file.
 
 ## Copyright
 
-:copyright: jonasbn 2016-2018
+:copyright: jonasbn 2016-2022
