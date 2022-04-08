@@ -135,6 +135,9 @@ The programmatic capabilities discovered while implementing my first `bash` comp
 
 ## History
 
+- 2.2.0
+  - Major contribution from @rpgoldman expanding the capabilities of this tool extensively
+
 - 2.1.0
   - Minor adjustment to behaviour, post completions, the contents of the current directory is listed
 
