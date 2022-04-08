@@ -56,7 +56,7 @@ That is all this `bash` tab completion does for now :-)
 ## Download
 
 ```bash
-$ curl https://raw.githubusercontent.com/jonasbn/bash_completion_ack/master/ack > ack
+curl https://raw.githubusercontent.com/jonasbn/bash_completion_ack/master/ack > ack
 ```
 
 ## Installation
@@ -80,13 +80,13 @@ Ref: [ServerFault.com: _Standard place for user defined bash_completion.d script
 Create a directiory for your completions:
 
 ```bash
-$ mkdir ~/.bash_completion.d
+mkdir ~/.bash_completion.d
 ```
 
 Copy your completions into the newly created directory:
 
 ```bash
-$ cp ack ~/.bash_completion.d/
+cp ack ~/.bash_completion.d/
 ```
 
 Start a new shell and you should be good to go.
@@ -96,7 +96,7 @@ Start a new shell and you should be good to go.
 Based on [an introduction](https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1) to `bash` completions on Debian.
 
 ```bash
-$ sudo cp ack /etc/bash_completion.d/
+sudo cp ack /etc/bash_completion.d/
 ```
 
 ### System-wide example from OSX
@@ -108,25 +108,25 @@ Do note that paths vary based on whether you are using `bash` 3 or 4
 #### `bash` 3 (Formula: `bash-completions`)
 
 ```bash
-$ cp ack /usr/local/etc/bash_completion.d/
+cp ack /usr/local/etc/bash_completion.d/
 ```
 
 And to activate right away:
 
 ```bash
-$ source  /usr/local/etc/bash_completion.d/ack
+source  /usr/local/etc/bash_completion.d/ack
 ```
 
 #### `bash` 4 (Formula: `bash-completions2`)
 
 ```bash
-$ cp ack /usr/local/share/bash-completion/completions/
+cp ack /usr/local/share/bash-completion/completions/
 ```
 
 And to activate right away:
 
 ```bash
-$ source /usr/local/share/bash-completion/completions/ack
+source /usr/local/share/bash-completion/completions/ack
 ```
 
 ## Motivation
