@@ -2,31 +2,205 @@
 
 <!-- markdownlint-disable MD014 -->
 
-Experimental tab completion for [ack](http://beyondgrep.com/), the CLI tool going beyond grep.
+Experimental tab completion for [ack](http://beyondgrep.com/), the CLI tool going beyond `grep`.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Usage
 
-This completion script, reads your `$HOME/.ackrc` files and offers tab completions for your custom types.
-
 ```bash
 $ ack -<tab>
---yourcustomtype
+--actionscript
+--ada
+--after-context
+--asm
+--asp
+--aspx
+--bar
+--batch
+--bazel
+--before-context
+--break
+--cathy
+--cc
+--cfmx
+--clojure
+--cmake
+--coffeescript
+--color
+--color-colno
+--color-filename
+--color-lineno
+--color-match
+--column
+--conf
+--context
+--count
+--cpp
+--csharp
+--css
+--dart
+--delphi
+--dump
+--elisp
+--elixir
+--elm
+--env
+--erlang
+--files-with-matches
+--files-without-matches
+--filter
+--flush
+--follow
+--fortran
+--go
+--groovy
+--group
+--gsp
+--haskell
+--heading
+--help
+--help-colors
+--help-rgb-colors
+--help-types
+--hh
+--hpp
+--html
+--ignore-case
+--ignore-dir
+--ignore-directory
+--ignore-file-r
+--invert-match
+--jade
+--java
+--js
+--json
+--jsp
+--known-types
+--kotlin
+--less
+--lisp
+--literal
+--lua
+--make
+--man
+--markdown
+--match
+--matlab
+--mojo
+--no-filename
+--no-ignore-case
+--no-recurse
+--nobreak
+--nocolor
+--nocolumn
+--noenv
+--nofilter
+--nofollow
+--nogroup
+--noheading
+--noignore-dir
+--noignore-directory
+--nopager
+--nosmart-case
+--nounderline
+--objc
+--objcpp
+--ocaml
+--output
+--pager
+--passthru
+--pconf
+--perl
+--perltest
+--php
+--plone
+--pod
+--print0
+--proximate
+--purescript
+--python
+--rake
+--range-end
+--range-start
+--recurse
+--rr
+--rst
+--ruby
+--rust
+--sass
+--scala
+--scheme
+--shell
+--show-types
+--smalltalk
+--smart-case
+--smarty
+--sort-files
+--sql
+--stylus
+--svg
+--swift
+--tcl
+--tex
+--thpppt
+--toml
+--ts
+--ttml
+--type
+--underline
+--vb
+--verilog
+--version
+--vhdl
+--vim
+--with-filename
+--word-regexp
+--xml
+--yaml
+-1
+-A
+-B
+-c
+-C
+-f
+-g
+-h
+-H
+-i
+-I
+-k
+-l
+-L
+-n
+-o
+-p
+-Q
+-R
+-s
+-S
+-t
+-T
+-v
+-w
+-x
 ```
 
-An example `ackrc` based on [my TIL](https://github.com/jonasbn/til/blob/master/ack/define_a_custom_search_filetype_scope.md)
+It also supports definitions from your `$HOME/.ackrc`, so the above list might look different in your local environment.
+
+The example `ackrc` based on [my TIL](https://github.com/jonasbn/til/blob/master/ack/define_a_custom_search_filetype_scope.md)
 
 ```ini
 --type-set=mojo=.css,.pl,.pm,.html,.js,.tt,.ep,.conf
 --type-set=conf=.conf
+--type-set=conf=.pconf
 ```
 
 Would work as follows:
 
 ```bash
 $ ack -<tab>
---mojo --conf
+--mojo --conf --pconf
 ```
 
 ```bash
@@ -43,15 +217,13 @@ If you _tab_ after your completion has been made the contents of the current dir
 
 ```bash
 $ ack -<tab>
---mojo --conf
+--mojo --conf --pconf
 $ ack --mojo <tab>
 .editorconfig                          CONTRIBUTING.md                        bash_completion_ack.code-workspace
 .git/                                  LICENSE                                bash_completion_ack.sublime-project
 .gitattributes                         README.md                              bash_completion_ack.sublime-workspace
 .gitignore                             ack
 ```
-
-That is all this `bash` tab completion does for now :-)
 
 ## Download
 
