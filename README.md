@@ -196,7 +196,7 @@ The example `ackrc` based on [my TIL](https://github.com/jonasbn/til/blob/master
 --type-set=conf=.pconf
 ```
 
-Would work as follows:
+Would work as follows, listing your custom types among ALL of the other options:
 
 ```bash
 $ ack -<tab>
@@ -216,8 +216,6 @@ List contents of directory as default for `bash`.
 If you _tab_ after your completion has been made the contents of the current directory is displayed:
 
 ```bash
-$ ack -<tab>
---mojo --conf --pconf
 $ ack --mojo <tab>
 .editorconfig                          CONTRIBUTING.md                        bash_completion_ack.code-workspace
 .git/                                  LICENSE                                bash_completion_ack.sublime-project
