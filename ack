@@ -77,8 +77,8 @@ _ack()
 
     if [[ "$cur" == -* ]]; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    # else
-    #     compopt -o default
+    else
+        compopt -o default
     fi
 }
 
