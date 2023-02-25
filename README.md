@@ -247,7 +247,7 @@ done
 
 Ref: [ServerFault.com: _Standard place for user defined bash_completion.d scripts?_](https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts)
 
-Create a directiory for your completions:
+Create a directory for your completions:
 
 ```bash
 mkdir ~/.bash_completion.d
@@ -301,7 +301,7 @@ source /usr/local/share/bash-completion/completions/ack
 
 ## Motivation
 
-The programmatic capabilities discovered while implementing my first `bash` completions intriqued me. This is a highly experimental feature, which nevertheless was lots of fun to implement.
+The programmatic capabilities discovered while implementing my first `bash` completions intrigued me. This is a highly experimental feature, which nevertheless was lots of fun to implement.
 
 ## History
 
