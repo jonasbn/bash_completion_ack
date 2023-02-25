@@ -305,6 +305,9 @@ The programmatic capabilities discovered while implementing my first `bash` comp
 
 ## History
 
+- 2.2.1
+  - Bug fix release, addressing issue introduced in 2.2.0, making the defaults not work
+
 - 2.2.0
   - Major contribution from @rpgoldman expanding the capabilities of this tool extensively
 
