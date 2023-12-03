@@ -6,7 +6,7 @@
 # Extentions Copyright Robert P. Goldman (rpgoldman) and SIFT, LLC (siftech) 2022
 # MIT License
 
-_acktypes=$(ack --help-types | tail +10 | awk '{gsub(/^[ \t]+/,"",$1); print$1;}')
+_acktypes=$(ack --help-types | tail -n +10 | awk '{gsub(/^[ \t]+/,"",$1); print$1;}')
 _acktypeargs=$(echo "${_acktypes}" | perl -ne 'chomp; print("--${_} ");')
 _negacktypes=$(echo "${_acktypes}" | perl -ne 'chomp; print("no${_} ");')
 _acktypes=$(echo "${_acktypes}" | perl -ne 'chomp; print("${_} ");')
